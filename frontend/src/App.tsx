@@ -1,6 +1,7 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom"
 import Layout from './Layout/Layout'
+import Register from './Pages/Register'
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
               <p>Search Page</p>
             </Layout>
           }/>
+          <Route path='/register' element={<Layout><Register /></Layout>} />
+
           <Route path="*" element={<Navigate to="/" />}/>
         </Routes>
       </Router>
